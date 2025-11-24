@@ -1,0 +1,52 @@
+ul {
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: square;
+  background-color: beige;
+}
+
+h4 {
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* Layout: form left, list right */
+.main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 16px 0;
+}
+
+.left {
+  flex: 0 0 40%; /* form column */
+}
+
+.right {
+  flex: 1; /* list column */
+}
+
+/* Make the list more readable */
+.right ul {
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* Página: fondo en degradado pastel (violeta -> azul) */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  /* Degradado suave pastel: violeta claro a azul claro */
+  background: linear-gradient(135deg, #f0e6ff 0%, #e3d8ff 40%, #d9eefe 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Asegurar que el contenedor principal no tenga fondo que oculte el degradado */
+.App, .main {
+  background: transparent;
+}
